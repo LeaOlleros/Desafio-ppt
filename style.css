@@ -1,0 +1,341 @@
+/* Estilos originales de Welcome - NO MODIFICADOS */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.title-from-welcome {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.decorative-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.img-rock, .img-paper, .img-scissors {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-rock:hover, .img-paper:hover, .img-scissors:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.instructions-btn {
+  background-color: #4c8baf;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.instructions-btn:hover {
+  background-color: #0c0109;
+}
+
+/* Responsive design original */
+@media (max-width: 768px) {
+  .title-from-welcome {
+    font-size: 2rem;
+  }
+  
+  .decorative-images-container {
+    gap: 20px;
+  }
+  
+  .img-rock,
+  .img-paper,
+  .img-scissors {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* NUEVOS ESTILOS PARA LA PÁGINA DE INSTRUCCIONES */
+.instructions-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+}
+
+.instructions-container {
+  background: linear-gradient(145deg, #28a745, #20c997);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(40, 167, 69, 0.3),
+    0 10px 20px rgba(40, 167, 69, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  margin-left: 27%; 
+}
+
+
+
+@keyframes shimmer {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+.instructions-title {
+  font-size: 3.8rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.instructions-text {
+  font-size: 1.8rem;
+  color: #f8f9fa;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.game-btn {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  color: #28a745;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+}
+
+.game-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 6px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para JUEGO.TS */
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.ai-section, .user-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.ai-title, .user-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.images-ai, .images-game {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.images-ai img, .images-game img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.images-ai img {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.images-game img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.images-game img.selected {
+  border: 4px solid #4CAF50;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+}
+
+.images-game img.not-selected {
+  opacity: 0.3;
+  transform: scale(0.9);
+}
+
+.images-game img.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.game-center {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.titulo-game {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.timer-display {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#timer-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#timer-number.timer-warning {
+  color: #ff9800;
+}
+
+#timer-number.timer-critical {
+  color: #f44336;
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+/* Responsive para todo */
+@media (max-width: 768px) {
+ /* PARA INSTRUCCIONES.TS       */
+  .instructions-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .instructions-title {
+    font-size: 1.8rem;
+  }
+  
+  .instructions-text {
+    font-size: 1rem;
+  }
+  
+  .game-btn {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+  }
+
+  /* PARA JUEGO.TS */
+
+  .images-ai, .images-game {
+    gap: 20px;
+  }
+  
+  .images-ai img, .images-game img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .titulo-game {
+    font-size: 2rem;
+  }
+  
+  .timer-display {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #timer-number {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .instructions-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .instructions-title {
+    font-size: 1.5rem;
+  }
+  
+  .instructions-text {
+    font-size: 0.9rem;
+  }
+}
